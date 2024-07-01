@@ -55,7 +55,7 @@ const Login = () => {
               placeholder="Enter Email"
               style={{
                 background: "transparent",
-                color: "white",
+
                 borderRadius: "20px",
                 height: "50px",
               }}
@@ -75,7 +75,6 @@ const Login = () => {
               placeholder="Enter Password"
               style={{
                 background: "transparent",
-                color: "white",
                 borderRadius: "20px",
                 height: "50px",
               }}

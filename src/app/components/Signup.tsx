@@ -65,7 +65,6 @@ const SignUp = () => {
               placeholder="Enter Name"
               style={{
                 background: "transparent",
-                color: "white",
                 borderRadius: "20px",
                 height: "50px",
               }}
@@ -83,7 +82,6 @@ const SignUp = () => {
               placeholder="Enter Email"
               style={{
                 background: "transparent",
-                color: "white",
                 borderRadius: "20px",
                 height: "50px",
               }}
@@ -101,7 +99,6 @@ const SignUp = () => {
               placeholder="Enter Password"
               style={{
                 background: "transparent",
-                color: "white",
                 borderRadius: "20px",
                 height: "50px",
               }}
@@ -119,7 +116,6 @@ const SignUp = () => {
               placeholder="Confirm Password"
               style={{
                 background: "transparent",
-                color: "white",
                 borderRadius: "20px",
                 height: "50px",
               }}
