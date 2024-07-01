@@ -6,12 +6,12 @@ import { Form, Row, Col, Button } from "react-bootstrap";
 import FormContainer from "@/app/components/FormContainer";
 import Link from "next/link";
 
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useToast } from "@/components/ui/use-toast";
 
 const Login = () => {
+  const { toast } = useToast();
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,20 +25,19 @@ const Login = () => {
     });
 
     if (signInData?.error) {
-      console.log(signInData.error);
+      toast({
+        title: "Signin error",
+        description: "Something Went Wrong",
+        variant: "destructive",
+      });
     } else {
+      router.refresh();
       router.push("/admin");
     }
   };
 
-  const toastStyle = {
-    color: "white",
-    background: "#0f1b21",
-    fontFamily: "serif",
-  };
-
   return (
-    <div>
+    <div className="min-h-screen w-full bg-gray-100 text-foreground">
       <FormContainer>
         <h1
           className="my-4 text-center"
@@ -96,7 +95,6 @@ const Login = () => {
             >
               Sign In
             </Button>
-            <ToastContainer toastStyle={toastStyle} />
           </Form.Group>
         </Form>
 
