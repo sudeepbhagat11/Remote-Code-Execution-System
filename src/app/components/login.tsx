@@ -32,22 +32,19 @@ const Login = () => {
       });
     } else {
       router.refresh();
-      router.push("/admin");
+      router.push("/");
     }
   };
 
   return (
     <div className="min-h-screen w-full bg-gray-100 text-foreground">
       <FormContainer>
-        <h1
-          className="my-4 text-center"
-          style={{ color: "grey", fontFamily: "serif" }}
-        >
+        <h1 className="my-4 text-center" style={{ fontFamily: "serif" }}>
           Log In
         </h1>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="email" className="my-4 ">
-            <Form.Label style={{ color: "grey", fontFamily: "serif" }}>
+            <Form.Label style={{ fontFamily: "serif" }}>
               Email Address
             </Form.Label>
             <Form.Control
@@ -67,9 +64,7 @@ const Login = () => {
           </Form.Group>
 
           <Form.Group controlId="password" className="my-4 ">
-            <Form.Label style={{ color: "grey", fontFamily: "serif" }}>
-              Password
-            </Form.Label>
+            <Form.Label style={{ fontFamily: "serif" }}>Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter Password"
@@ -85,20 +80,24 @@ const Login = () => {
             ></Form.Control>
           </Form.Group>
           <Form.Group className="text-center  mt-4">
-            <Button
+            {/* <Button
               type="submit"
               variant="outline-primary"
               className="mt-4"
               style={{ width: "140px", borderRadius: "20px", padding: "10px" }}
               //   disabled={isLoading}
             >
+              
               Sign In
-            </Button>
+            </Button> */}
+            <button className="border-balck  w-fit rounded-xl border-2 bg-black px-4 py-2  text-white transition-all hover:border-black hover:bg-black hover:bg-transparent  hover:text-black/90">
+              Sign In
+            </button>
           </Form.Group>
         </Form>
 
         <Row className="py-3 text-center mt-4">
-          <Col style={{ color: "grey", fontFamily: "serif" }}>
+          <Col style={{ fontFamily: "serif" }}>
             Not registered? <Link href="/sign-up">SignUp</Link>
           </Col>
         </Row>
